@@ -1,17 +1,18 @@
-import time
-
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.webdriver import WebDriver
 
 
-@pytest.fixture(scope="module")
-def driver():
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    options.add_argument('--headless=new')
-    options.add_argument('--start-maximized')
-    driver = webdriver.Chrome(options=options)
-    driver.maximize_window()
-    driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager")
+@pytest.fixture(scope='module')
+def driver() -> WebDriver:
+    """Фикстура для инициализации WebDriver.
+
+    Returns:
+        WebDriver: Экземпляр WebDriver для управления браузером.
+    """
+    chrome_options = Options()
+    chrome_options.add_argument("--window-size=1920,1080")
+    driver = webdriver.Chrome(options=chrome_options)
     yield driver
     driver.quit()
