@@ -27,7 +27,7 @@ class Customer:
     """ Представляет собой клиента.
 
     Attributes:
-        post_code (str): Почтовый индекс клиента.
+        post_code (str): Post Code клиента.
         first_name (str): Преобразованное имя клиента.
         last_name (str): Фамилия клиента.
     """

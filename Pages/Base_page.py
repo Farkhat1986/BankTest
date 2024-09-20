@@ -1,5 +1,4 @@
 from typing import Literal
-
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.alert import Alert
 from selenium.webdriver.remote.webelement import WebElement
