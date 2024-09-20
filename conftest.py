@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 
 @pytest.fixture(scope='module')
 def driver() -> WebDriver:
-    """Фикстура для инициализации WebDriver.
+    """Фикстура для инициализации WebDrivers.
 
     Returns:
         WebDriver: Экземпляр WebDriver для управления браузером.
