@@ -10,8 +10,8 @@ on:
         type: choice
         options:
           - test_create_customer
-          - test_sort_by_first_name
-          - test_delete_customers
+          - test_sort_customer
+          - test_delete
 
 
 permissions:
